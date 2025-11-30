@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Reportes de Ventas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="vue3.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+<body class="bg-light">
+
+<!-- BARRA DE NAVEGACIÓN-->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom mb-4">
+  <div class="container-fluid">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+
+      <ul class="navbar-nav">
+
+        <!-- Menú Principal (IZQUIERDA) -->
+        <li class="nav-item">
+          <a class="nav-link" href="menú.html">
+            <i class="bi bi-house-door-fill"></i> Menú Principal
+          </a>
+        </li>
+
+      </ul>
+
+      <!-- Productos y Reportes (DERECHA) -->
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index-venta.html">
+            <i class="bi bi-cart-check-fill"></i> Registro de Ventas
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="detalle_venta.html">
+            <i class="bi-receipt"></i> Detalle de venta
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="inventario.html">
+            <i class="bi bi-boxes"></i> Inventario
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<div id="appVue" class="container py-4">
+  <h2 class="mb-4">📊 Reportes de Ventas</h2>
+
+  <div class="row mb-4">
+    <!-- Dinero en Caja -->
+    <div class="col-md-4">
+      <div class="card shadow-sm text-center">
+        <div class="card-body">
+          <h5>Dinero en Caja</h5>
+          <h3 class="text-success">{{ formato(totalCaja) }}</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ganancia del Día -->
+    <div class="col-md-4">
+      <div class="card shadow-sm text-center">
+        <div class="card-body">
+          <h5>Ganancia por Fecha</h5>
+          <input type="date" v-model="fechaGanancia" @change="cargarGananciaDia" class="form-control mb-2">
+          <h3 class="text-primary">{{ formato(gananciaDia) }}</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ganancia del Mes -->
+    <div class="col-md-4">
+      <div class="card shadow-sm text-center">
+        <div class="card-body">
+          <h5>Ganancia del Mes</h5>
+          <h3 class="text-warning" @mouseenter="mostrarTooltipMes" @mouseleave="ocultarTooltipMes" style="cursor:default;">
+            {{ gananciaMesTexto }}
+          </h3>
+          <small v-if="tooltipMes" class="text-muted">Ganancia del mes actual (ventas registradas este mes)</small>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="reportes.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

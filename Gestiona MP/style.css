@@ -1,0 +1,589 @@
+/* ======================================================
+   PALETA PROFESIONAL – Azul Corporativo
+   ====================================================== */
+:root {
+    --azul-oscuro: #0a2e46;
+    --azul: #1565c0;
+    --azul-hover: #0e4a82;
+    --azul-claro: #5fa4e8;
+    --azul-extra-claro: #eaf3ff;
+    --azul-borde: #bcd9ff;
+
+    --texto: #1f2a36;
+    --sombra: rgba(0, 0, 0, 0.08);
+}
+
+/* ======================================================
+   BODY / TIPOGRAFÍA
+   ====================================================== */
+   @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background: var(--azul-extra-claro);
+    color: var(--texto);
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: var(--azul-oscuro);
+    letter-spacing: -0.5px;
+}
+
+/* ======================================================
+   INPUT ERROR
+   ====================================================== */
+.input-error {
+    border: 2px solid red !important;
+    background: #ffe6e6 !important;
+}
+
+/* ======================================================
+   ALERTA FLOTANTE GLOBAL
+   ====================================================== */
+.alerta-flotante {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+  min-width: 300px;
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+}
+
+.alerta-flotante.mostrar {
+  opacity: 1;
+}
+
+.alert-success { background: #28a745; color: white; }
+.alert-danger  { background: #dc3545; color: white; }
+.alert-warning { background: #ffc107; color: black; }
+.alert-info    { background: #0dcaf0; color: black; }
+
+/* ======================================================
+   CARDS — Estilo empresarial
+   ====================================================== */
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 10px;
+    border: 1px solid #dce8f5;
+    box-shadow: 0 4px 12px var(--sombra);
+}
+
+.card-header {
+    background: linear-gradient(90deg, var(--azul-oscuro), var(--azul));
+    color: white !important;
+    font-size: 1.15rem;
+    padding: 14px;
+    border-radius: 10px 10px 0 0 !important;
+}
+
+/* ======================================================
+   BOTONES — Premium Azul Corporativo
+   ====================================================== */
+.btn {
+    border-radius: 10px !important;
+    font-weight: 600 !important;
+    padding: 10px 16px !important;
+    transition: 0.25s ease;
+}
+
+/* PRIMARY */
+.btn-primary {
+    background: linear-gradient(180deg, var(--azul), var(--azul-hover)) !important;
+    border: none !important;
+    color: white !important;
+    box-shadow: 0 4px 10px rgba(21, 101, 192, .35) !important;
+}
+.btn-primary:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+/* EDITAR (lapiz en azul claro) */
+.btn-warning {
+    background: linear-gradient(180deg, var(--azul-claro), #3f7cbc) !important;
+    border: none !important;
+    color: white !important;
+    box-shadow: 0 4px 10px rgba(95, 164, 232, .35) !important;
+}
+.btn-warning:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+}
+
+/* ELIMINAR (azul oscuro elegante) */
+.btn-danger {
+    background: linear-gradient(180deg, var(--azul-oscuro), var(--azul-hover)) !important;
+    border: none !important;
+    color: white !important;
+    box-shadow: 0 4px 10px rgba(10, 46, 70, .35) !important;
+}
+.btn-danger:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+/* BOTÓN REGISTRAR USUARIO — Igual al resto (azul) */
+.btn-success {
+    background: linear-gradient(180deg, var(--azul), var(--azul-hover)) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 600 !important;
+    border-radius: 10px !important;
+    padding: 10px 18px !important;
+    box-shadow: 0 4px 10px rgba(21, 101, 192, 0.35) !important;
+}
+.btn-success:hover {
+    filter: brightness(1.15);
+    transform: translateY(-2px);
+}
+
+/* ======================================================
+   INPUTS MODERNOS
+   ====================================================== */
+.form-control,
+.form-select {
+    border-radius: 10px;
+    border: 1px solid var(--azul-borde) !important;
+    transition: 0.25s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--azul) !important;
+    box-shadow: 0 0 10px rgba(21, 101, 192, 0.3) !important;
+}
+
+/* ======================================================
+   TABLAS – Estilo corporativo
+   ====================================================== */
+.table {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px var(--sombra);
+}
+
+.table thead th {
+    background: linear-gradient(180deg, var(--azul-oscuro), var(--azul));
+    color: white !important;
+    padding: 14px;
+    font-size: 1rem;
+    border: none;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #e6eef7;
+    transition: 0.2s ease;
+}
+
+.table tbody tr:hover {
+    background: rgba(21, 101, 192, 0.12) !important;
+}
+
+/* FILAS ALTERNADAS */
+.table-striped tbody tr:nth-child(odd) {
+    background: #f7faff;
+}
+
+/* INVENTARIO: cabeza más azul */
+#appProductos .table thead th {
+    background: linear-gradient(180deg, #0a2e46, #0d4f7d);
+}
+
+/* ======================================================
+   AUTOCOMPLETE
+   ====================================================== */
+.autocomplete-list {
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+    border: 1px solid var(--azul-borde);
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 3px 12px var(--sombra);
+}
+
+.autocomplete-list li:hover {
+    background: var(--azul);
+    color: white;
+}
+
+/* ======================================================
+   MENÚ TIPO AMAZON
+   ====================================================== */
+.contenedor-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.cuadro-menu {
+    background: white;
+    border-radius: 16px;
+    padding: 25px 10px;
+    text-align: center;
+    box-shadow: 0 3px 10px var(--sombra);
+    transition: transform .2s ease, box-shadow .2s ease;
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cuadro-menu:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.10);
+}
+
+.icono-menu {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: var(--azul);
+}
+
+.texto-menu {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* ======================================================
+   LINKS
+   ====================================================== */
+a {
+    color: var(--azul);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--azul-hover);
+}
+
+/* Flecha verde regresar */
+.flecha-verde{
+    position: absolute; 
+    top: 15px; 
+    left: 15px;
+    text-decoration: none; 
+    font-size: 24px;
+    color: #28a745; 
+    font-weight: bold;
+}
+/* ======================================================
+   Crear Usuario — Azul Corporativo
+   ====================================================== */
+.btn-success {
+    background: linear-gradient(180deg, var(--azul), var(--azul-hover)) !important;
+    border: none !important;
+    color: white !important;
+    font-weight: 600 !important;
+    border-radius: 10px !important;
+    padding: 10px 18px !important;
+    box-shadow: 0 4px 10px rgba(21, 101, 192, 0.35) !important;
+    transition: 0.25s ease-in-out !important;
+}
+
+.btn-success:hover {
+    filter: brightness(1.12) !important;
+    transform: translateY(-2px);
+}
+/* Barra azul claro */
+.navbar-custom {
+    background: linear-gradient(90deg, #4fa3f7, #7cc6ff);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Texto negro */
+.navbar-custom .nav-link {
+    color: #000000 !important;
+    font-weight: 600;
+}
+
+.navbar-custom .nav-link:hover {
+    color: #333333 !important;
+}
+
+/* Iconos también negros */
+.navbar-custom .nav-link i {
+    color: #000000 !important;
+}
+
+/* Icono hamburguesa */
+.navbar-custom .navbar-toggler {
+    border-color: #000000;
+}
+
+.navbar-custom .navbar-toggler-icon {
+    filter: brightness(0);
+}
+/* ============================================================
+   ESTILOS GENERALES
+   ============================================================ */
+.mp-body {
+  background-color: #f8fafc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.mp-navbar {
+  padding: 14px 0;
+}
+
+.mp-brand-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0d6efd;
+  letter-spacing: 0.5px;
+}
+
+.mp-brand-sub {
+  font-size: 0.75rem;
+  color: #6c757d;
+}
+
+.mp-btn-login {
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+.mp-hero {
+  padding: 60px 0;
+  background: linear-gradient(to bottom, #e7f1ff, #ffffff);
+}
+
+.mp-hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #0a58ca;
+  font-family: 'Poppins', sans-serif;
+}
+
+.mp-hero-text {
+  font-size: 1.1rem;
+  color: #5a6a7a;
+  max-width: 520px;
+}
+
+.mp-btn-start {
+  padding: 12px 34px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* ============================================================
+   CARD DE INFORMACIÓN
+   ============================================================ */
+.mp-card-info {
+  border: none;
+  border-left: 4px solid #0d6efd;
+}
+
+.mp-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #084298;
+}
+
+.mp-card-description {
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+/* ============================================================
+   SECCIÓN DE TIPOS DE PRODUCTO
+   ============================================================ */
+.mp-types-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #084298;
+}
+
+.mp-type-card {
+  border: none;
+  background-color: #ffffff;
+  transition: all 0.25s ease;
+  border-radius: 10px;
+}
+
+.mp-type-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.mp-type-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0d6efd;
+}
+
+.mp-type-text {
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.mp-footer-text {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
+/* Tipografía */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+body.mp-body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f5f8ff;
+    margin: 0;
+    padding: 0;
+}
+
+/* NAVBAR */
+.mp-navbar {
+    padding: 12px 0;
+}
+
+.mp-navbar-container {
+    display: flex;
+    align-items: center;
+}
+
+.mp-brand-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #000; /* negro */
+}
+
+.mp-brand-sub {
+    color: #333; /* gris oscuro */
+    font-weight: 500;
+}
+
+.mp-btn-login {
+    font-weight: 600;
+    padding: 8px 18px;
+}
+
+/* HERO */
+.mp-hero {
+    padding: 70px 0;
+}
+
+.mp-hero-title {
+    font-size: 52px;
+    font-weight: 700;
+    color: #000; /* negro */
+}
+
+.mp-hero-text {
+    font-size: 18px;
+    color: #333;
+    max-width: 600px;
+}
+
+.mp-btn-start {
+    font-weight: 600;
+    padding: 12px 35px;
+    font-size: 20px;
+}
+
+/* TARJETA DE INFO */
+.mp-card-info {
+    border-radius: 14px;
+    background: #ffffff;
+}
+
+.mp-card-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #000; /* negro */
+}
+
+.mp-card-description {
+    font-size: 16px;
+    color: #333;
+}
+
+/* SECCIÓN DE TIPOS */
+.mp-types-section {
+    padding-top: 20px;
+}
+
+.mp-types-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000; /* negro */
+    text-align: center;
+}
+
+.mp-type-card {
+    border-radius: 14px;
+    border: 2px solid #d9e4ff;
+    transition: 0.25s ease-in-out;
+}
+
+.mp-type-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.08);
+}
+
+.mp-type-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000; /* negro */
+}
+
+.mp-type-text {
+    font-size: 15px;
+    color: #333;
+}
+
+/* FOOTER */
+.mp-footer {
+    background: #ffffff;
+}
+
+.mp-footer-text {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+/* === Botón Registrar Usuario con el mismo azul que los demás === */
+.btn-success {
+    background-color: #007bff !important;   /* azul principal */
+    border-color: #007bff !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    border-radius: 8px !important;
+    padding: 10px 18px !important;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.25) !important;
+    transition: 0.2s ease-in-out !important;
+}
+
+.btn-success:hover {
+    background-color: #0056b3 !important;   /* azul hover */
+    border-color: #0056b3 !important;
+    transform: translateY(-2px);
+}
+

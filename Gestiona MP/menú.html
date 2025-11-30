@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Principal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="fondo-app">
+    <div id="appVue" class="container mt-5">
+        <h1 class="text-center mb-4 titulo-marca">Gestiona MP</h1>
+        <div class="text-end mb-3">
+            <a href="index.html" class="btn btn-danger boton-salir">Salir</a>
+        </div>
+        <div class="card sombra-tarjeta p-4">
+            <h4 class="mb-4 titulo-seccion">Menú Principal</h4>
+
+            <div class="contenedor-menu">
+
+                <a href="inventario.html" class="cuadro-menu">
+                    <div class="icono-menu">📦</div>
+                    <div class="texto-menu">Ver inventario</div>
+                </a>
+
+                <a href="productos.html" class="cuadro-menu">
+                    <div class="icono-menu">➕</div>
+                    <div class="texto-menu">Agregar Producto</div>
+                </a>
+
+                <a href="index-venta.html" class="cuadro-menu">
+                    <div class="icono-menu">🛒</div>
+                    <div class="texto-menu">Registrar Venta</div>
+                </a>
+
+                <a href="detalle_venta.html" class="cuadro-menu">
+                    <div class="icono-menu">📃</div>
+                    <div class="texto-menu">Detalle de Ventas</div>
+                </a>
+
+                <a href="reportes.html" class="cuadro-menu">
+                    <div class="icono-menu">🧮</div>
+                    <div class="texto-menu">Reportes</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="vue3.js"></script>
+    <script src="panel_principal.js"></script>
+</body>
+</html>
